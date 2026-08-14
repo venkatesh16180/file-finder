@@ -2,3 +2,5 @@ library.db
 inventory_*.csv
 __pycache__/
 venv/
+embeddings.npy
+embedding_ids.npy
