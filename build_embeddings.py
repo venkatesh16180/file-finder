@@ -4,7 +4,7 @@ import numpy as np
 
 GENERIC_NAMES = {
     "movies", "movie", "series", "show", "games", "game", "music", "comics", "comic", "books", "book", "audiobook",
-    "audiobooks", "courses", "course", "download", "downloads", "others", "pictures", "photos", "photo", 
+    "audiobooks", "courses", "course", "download", "downloads", "others", "pictures", "photos", "photo", "anime", 
 }
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
