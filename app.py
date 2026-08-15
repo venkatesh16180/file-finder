@@ -1,3 +1,21 @@
+"""
+app.py — Phase 7: Streamlit web interface for the media library finder.
+
+Same hybrid retrieval and Ollama logic as ask.py (semantic search + threshold
+filtering + LLM title extraction + keyword fallback + SPECIAL_QUERIES), ported
+to a request/response model instead of a REPL loop. See ask.py's docstring and
+BUILD-JOURNAL.md Phase 6 for why retrieval works the way it does.
+
+Model, DB connection, and embedding arrays are cached with @st.cache_resource /
+@st.cache_data so they load once per session, not once per question — Streamlit
+reruns this whole script on every interaction. The full retrieval-and-generation
+block runs inside a single spinner, since it can involve two sequential Ollama
+calls (title extraction, then the recommendation itself).
+
+A ModuleNotFoundError for torchvision may print in the terminal on startup —
+that's Streamlit's file watcher probing an unused transformers submodule, not
+a real dependency gap. See BUILD-JOURNAL.md, Phase 7.
+"""
 import streamlit as st
 import sqlite3
 import numpy as np
