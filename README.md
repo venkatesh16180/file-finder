@@ -32,7 +32,7 @@ A natural-language search engine for a personal media library spread across 9 ph
    python categorize.py
    python build_embeddings.py
 ```
-   Run `scan.py` once per drive you want indexed. When you run it you will be asked two things the Drive Label(what do you want to call this HDD) and the path to the parent folder/file you want to index (often times its the something like H:\ or D:\ if you only have one drive)
+   Run `scan.py` once per drive you want indexed. When you run it you will be asked two things the Drive Label(what do you want to call this HDD) and the path to the parent folder you want to index (often times its the something like H:\ or D:\ if you only have one drive)
 
 6. Run it:
 ```
